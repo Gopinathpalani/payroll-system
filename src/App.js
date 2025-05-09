@@ -1,30 +1,25 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import EmployeeList from './pages/EmployeeList';
-import AddEmployee from './pages/AddEmployee';
-import Attendance from './pages/Attendance';
-import SalarySlip from './pages/SalarySlip';
-import NotFound from './pages/NotFound'; // Import the NotFound component
+import logo from './logo.svg';
 import './App.css';
 
-function App = () {
+function App() {
   return (
-    <div classname="App">
-      <h1>Welcome to my react app</h1>
-      <p>this is the homepage.</p>
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<EmployeeList />} />
-        <Route path="/add-employee" element={<AddEmployee />} />
-        <Route path="/attendance" element={<Attendance />} />
-        <Route path="/salary-slip" element={<SalarySlip />} />
-        <Route path="*" element={<NotFound />} /> {/* Catch-all route */}
-      </Routes>
-    </Router>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
     </div>
   );
-};
+}
 
 export default App;
